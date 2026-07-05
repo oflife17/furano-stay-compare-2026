@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>富良野3日目 宿比較 | 2026/09/16</title>
+    <meta
+      name="description"
+      content="2026年9月16日チェックイン・大人2名・禁煙・温泉必須の条件で、富良野周辺の6宿を食事重視で比較した手動更新サイト。"
+    />
+    <link rel="stylesheet" href="https://oflife17.github.io/sounkyo-stay-compare-2026/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">FURANO STAY DECISION</p>
+        <h1>3日目の宿を、<br />条件適合で決める。</h1>
+        <p class="lead">
+          2026年9月16日チェックイン、1泊2日、大人2名、禁煙、温泉必須。
+          優先順位は <strong>食事 → 温泉 → 綺麗さ → 貸切風呂 / 客室風呂</strong>。
+        </p>
+        <div class="hero-meta">
+          <span>比較対象: 富良野ホテル / エーデルヴェルメ / ナトゥールヴァルト富良野 / nozo hotel / ラビスタ富良野ヒルズ / 一花</span>
+          <span>更新方式: 手動更新</span>
+          <span id="snapshot-label">読み込み中…</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="controls card">
+          <div class="controls-row">
+            <div>
+              <p class="section-kicker">Controls</p>
+              <h2>比較操作</h2>
+            </div>
+            <div class="button-row">
+              <button id="sort-price" class="button button-outline" type="button">
+                価格で並び替え
+              </button>
+              <button id="refresh-availability" class="button button-primary" type="button">
+                予約状況を更新
+              </button>
+              <button id="save-pdf" class="button button-dark" type="button">
+                PDF保存
+              </button>
+            </div>
+          </div>
+          <p class="controls-note">
+            「予約状況を更新」は、このサイトに保存済みの最新 JSON を再取得します。
+            GitHub Pages 上での外部予約サイト自動スクレイプは行っていません。
+          </p>
+        </section>
+
+        <section class="summary-grid" id="top-summary"></section>
+
+        <section class="card">
+          <p class="section-kicker">Recommendation</p>
+          <h2>結論</h2>
+          <div id="recommendation" class="recommendation"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Matrix</p>
+              <h2>比較一覧</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>宿</th>
+                  <th>総評</th>
+                  <th>料金</th>
+                  <th>予約状況</th>
+                  <th>食事</th>
+                  <th>温泉</th>
+                  <th>綺麗さ</th>
+                  <th>貸切 / 客室風呂</th>
+                </tr>
+              </thead>
+              <tbody id="compare-table"></tbody>
+            </table>
+          </div>
+          <div id="compare-mobile" class="mobile-matrix"></div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Details</p>
+              <h2>宿ごとの詳細</h2>
+            </div>
+          </div>
+          <div id="hotel-cards" class="hotel-grid"></div>
+        </section>
+
+        <section class="card">
+          <p class="section-kicker">Method</p>
+          <h2>このサイトの読み方</h2>
+          <ul class="plain-list">
+            <li>価格は「2026/09/16 チェックイン・1泊・大人2名・禁煙・温泉前提」の手動確認スナップショットです。</li>
+            <li>朝食付き以上を優先し、夕食は任意条件として扱っています。</li>
+            <li>価格が未取得の宿は、予約導線を優先して残し、更新時に再確認対象として扱っています。</li>
+            <li>「綺麗さ」は公式サイト上の改装情報・客室訴求・館内訴求を基にした比較用推定です。</li>
+            <li>ユーザー記載の「エーデルフェルメ」は、正式名称「エーデルヴェルメ」として比較しています。</li>
+            <li>天然温泉の確認が取れない宿は、その不確実性を比較メモに明記しています。</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://oflife17.github.io/sounkyo-stay-compare-2026/app.20260705.js" type="module"></script>
+  </body>
+</html>
