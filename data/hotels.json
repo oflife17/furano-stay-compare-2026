@@ -1,0 +1,405 @@
+{
+  "snapshot": {
+    "updatedAt": "2026-07-05 JST 手動更新（3日目・富良野版 初回公開）",
+    "scope": "2026/09/16チェックイン・1泊・大人2名・禁煙・温泉必須・朝食付以上を優先",
+    "note": "価格は公式予約導線を優先して手動確認。予約基盤が接続拒否の宿は未取得として明示しています。"
+  },
+  "hotels": [
+    {
+      "id": "lavista-furano",
+      "rank": 1,
+      "name": "ラビスタ富良野ヒルズ",
+      "bestFor": "条件一致を最優先しつつ、貸切風呂も欲しい二人向け",
+      "summary": "天然温泉・無料貸切風呂・朝食強度・駅徒歩3分が揃う。今回条件では最も穴が少ない。",
+      "recommendation": "天然温泉、3つの無料貸切風呂、朝食付きの実売約2.7万円、富良野駅徒歩3分が同時に成立します。4軸の総合点で最も失敗しにくい本命です。",
+      "altRecommendation": "静けさと客室風呂寄りに振るなら富良野ホテルも魅力ですが、指定日の予約確度ではラビスタが上です。",
+      "scores": {
+        "food": 4.8,
+        "onsen": 4.9,
+        "cleanliness": 4.7,
+        "privateBath": 4.8
+      },
+      "pricing": {
+        "qualifyingFrom": 26972,
+        "referenceFrom": 26972,
+        "shortLabel": "朝食付 ¥26,972〜",
+        "detail": "公式予約で朝食付プラン ¥13,486〜 / 人を確認。サイトでは大人2名合計の税込目安として ¥26,972〜 に換算しています。"
+      },
+      "availability": {
+        "label": "空室あり",
+        "badgeClass": "badge-ok",
+        "detail": "公式予約で朝食付・2食付とも可視在庫を確認。表示価格は大人1名単価だったため2名合計へ換算しています。"
+      },
+      "cancellation": "予約確認・変更・キャンセル導線あり。キャンセル料率は各プラン詳細で要確認",
+      "location": {
+        "summary": "富良野駅前寄り。駅徒歩3分で、夜の食事や翌朝移動も組みやすい。",
+        "highlights": [
+          "住所: 〒076-0026 北海道富良野市朝日町5-14",
+          "JR富良野駅から徒歩3分",
+          "市街地側なので駅前飲食店や翌朝の移動と相性が良い"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%92%E3%83%AB%E3%82%BA"
+      },
+      "facilities": [
+        "天然温泉 紫雲の湯",
+        "内湯、露天風呂、壺湯、打たせ湯、サウナ",
+        "無料貸切風呂3種",
+        "朝食バイキング、夕食レストラン / コースあり",
+        "全室禁煙"
+      ],
+      "comparisonNotes": [
+        "食事: 朝食バイキングと夕食導線の両輪が強い",
+        "温泉: 6候補で最上位",
+        "綺麗さ: ブランド訴求と館内印象が安定",
+        "貸切 / 客室風呂: 無料貸切風呂で最上位級"
+      ],
+      "booking": {
+        "official": "https://dormy-hotels.com/dormyinn/hotels/furano/",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%92%E3%83%AB%E3%82%BA",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%92%E3%83%AB%E3%82%BA"
+      },
+      "sources": [
+        {
+          "label": "ラビスタ富良野ヒルズ 公式トップ",
+          "url": "https://dormy-hotels.com/dormyinn/hotels/furano/"
+        },
+        {
+          "label": "ラビスタ富良野ヒルズ 公式 朝食",
+          "url": "https://dormy-hotels.com/dormyinn/hotels/furano/breakfast"
+        },
+        {
+          "label": "ラビスタ富良野ヒルズ 公式予約検索",
+          "url": "https://dormy-hotels.com/reserve/search-plan?result=1&keyword=%E5%A4%A9%E7%84%B6%E6%B8%A9%E6%B3%89%20%E7%B4%AB%E9%9B%B2%E3%81%AE%E6%B9%AF%20%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%92%E3%83%AB%E3%82%BA&checkin=2026%2F09%2F16&number_of_nights=1&number_of_rooms=1&search_by_tag=plan&tags=&brands=&order_by=&keyword_reference=&stock_check=false&number_of_adults[]=2&number_of_children_need_futons[]=0&number_of_children_no_need_futons[]=0"
+        }
+      ]
+    },
+    {
+      "id": "furano-hotel",
+      "rank": 2,
+      "name": "富良野ホテル FURANO HOTEL",
+      "bestFor": "静けさと客室風呂寄りの滞在を優先したい二人向け",
+      "summary": "天然温泉と温泉スイートを持つ大人向けの静かな宿。食の印象も強いが、指定日は在庫未検出。",
+      "recommendation": "天然温泉、大浴場、露天風呂、温泉スイートという条件面はかなり強いです。空きがあれば本命級ですが、指定日検索で在庫未検出だったため2番手に置きます。",
+      "altRecommendation": "ラビスタより静かな滞在や客室風呂寄りを重視するなら、空室復活時の最優先候補です。",
+      "scores": {
+        "food": 4.7,
+        "onsen": 4.7,
+        "cleanliness": 4.8,
+        "privateBath": 4.9
+      },
+      "pricing": {
+        "qualifyingFrom": null,
+        "referenceFrom": null,
+        "shortLabel": "該当日未検出",
+        "detail": "同条件の公式予約検索では 2026/09/16-17 の結果0件を確認。通常時の朝食付訴求は見えるものの、この日程の税込総額は表示されませんでした。"
+      },
+      "availability": {
+        "label": "該当日未検出",
+        "badgeClass": "badge-hold",
+        "detail": "公式検索で同条件の可視在庫が0件。売り切れ、販売停止、または条件不一致の可能性があります。"
+      },
+      "cancellation": "キャンセル不可プランあり。通常条件は各プラン詳細で要確認",
+      "location": {
+        "summary": "学田エリアの高台寄り。街中より静けさ重視の立地です。",
+        "highlights": [
+          "住所: 〒076-0035 北海道富良野市字学田三区",
+          "敷地3万5,000坪クラスの静かな環境訴求",
+          "市街中心より離れるため車移動前提だが、落ち着いて泊まりやすい"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%9B%E3%83%86%E3%83%AB%20FURANO%20HOTEL"
+      },
+      "facilities": [
+        "天然温泉、大浴場、露天風呂",
+        "温泉スイートルームあり",
+        "朝食付プラン、素泊まり、特別料金プランを確認",
+        "全26室のスモールラグジュアリー寄り",
+        "全室禁煙系プランを確認"
+      ],
+      "comparisonNotes": [
+        "食事: 派手さより丁寧さと静けさ寄り",
+        "温泉: 天然温泉と露天でかなり強い",
+        "綺麗さ: 客室と館内の上質感は高い",
+        "貸切 / 客室風呂: 温泉スイートが最も明確"
+      ],
+      "booking": {
+        "official": "https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=0000003334",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%9B%E3%83%86%E3%83%AB",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+%E5%AF%8C%E8%89%AF%E9%87%8E%E3%83%9B%E3%83%86%E3%83%AB"
+      },
+      "sources": [
+        {
+          "label": "富良野ホテル 公式トップ",
+          "url": "https://www.furanohotel.co.jp/"
+        },
+        {
+          "label": "富良野ホテル 公式予約",
+          "url": "https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=0000003334"
+        }
+      ]
+    },
+    {
+      "id": "naturwald",
+      "rank": 3,
+      "name": "ホテルナトゥールヴァルト富良野",
+      "bestFor": "朝食・ビュッフェ重視で、北の峰側に寄せたい二人向け",
+      "summary": "食事訴求と無料サービスの厚みが強い。温泉は光明石温泉表記で、天然温泉の厳密条件では一段下がる。",
+      "recommendation": "食事1位だけなら、ナトゥールヴァルトのバイキング訴求はかなり強めです。ただし温泉は天然温泉ではなく光明石温泉表記のため、今回条件では3番手に留めます。",
+      "altRecommendation": "温泉の厳密さを少し緩めて食事と館内サービスを重視するなら、nozo hotel より先に検討してよい宿です。",
+      "scores": {
+        "food": 4.6,
+        "onsen": 3.8,
+        "cleanliness": 4.3,
+        "privateBath": 2.2
+      },
+      "pricing": {
+        "qualifyingFrom": null,
+        "referenceFrom": null,
+        "shortLabel": "未取得",
+        "detail": "公式予約基盤（489ban）が現在の環境から接続拒否で、指定条件の税込総額を確定できませんでした。"
+      },
+      "availability": {
+        "label": "要公式再確認",
+        "badgeClass": "badge-unknown",
+        "detail": "予約導線は確認済みですが、結果画面の取得ができませんでした。"
+      },
+      "cancellation": "予約確認・キャンセル導線あり。料率は各プラン詳細で要確認",
+      "location": {
+        "summary": "北の峰エリア。富良野スキー場から徒歩約2分で、ゲレンデ側動線が強いです。",
+        "highlights": [
+          "住所: 〒076-0034 北海道富良野市北の峰町14-46",
+          "富良野スキー場から徒歩約2分",
+          "北の峰側に泊まりたい場合の定番立地"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%8A%E3%83%88%E3%82%A5%E3%83%BC%E3%83%AB%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%88%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "facilities": [
+        "光明石温泉、露天風呂あり",
+        "お食事会場リニューアル、ビュッフェ訴求強め",
+        "無料サービスが多いコンセプトホテル",
+        "全室禁煙系導線あり",
+        "予約確認・キャンセル導線あり"
+      ],
+      "comparisonNotes": [
+        "食事: 6候補でも上位級",
+        "温泉: 天然温泉ではなく光明石温泉表記",
+        "綺麗さ: 館内刷新やコンセプトフロア訴求あり",
+        "貸切 / 客室風呂: 明確な強みは見えにくい"
+      ],
+      "booking": {
+        "official": "https://naturwald-furano.com/",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+%E3%83%8A%E3%83%88%E3%82%A5%E3%83%BC%E3%83%AB%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%88%E5%AF%8C%E8%89%AF%E9%87%8E",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+%E3%83%8A%E3%83%88%E3%82%A5%E3%83%BC%E3%83%AB%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%88%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "sources": [
+        {
+          "label": "ナトゥールヴァルト富良野 公式トップ",
+          "url": "https://naturwald-furano.com/"
+        },
+        {
+          "label": "ナトゥールヴァルト富良野 公式 温泉",
+          "url": "https://naturwald-furano.com/spa"
+        },
+        {
+          "label": "ナトゥールヴァルト富良野 公式予約",
+          "url": "https://reserve.489ban.net/client/naturwald/0/plan"
+        }
+      ]
+    },
+    {
+      "id": "nozo-hotel",
+      "rank": 4,
+      "name": "nozo hotel",
+      "bestFor": "新しさと価格の取りやすさを重視したい二人向け",
+      "summary": "北の峰側で新しさが強い。朝食付実売は取りやすいが、天然温泉の確認は取れていません。",
+      "recommendation": "デザインと新しさ、朝食付2.5万円前後の取りやすさは魅力です。一方で温浴は Sugi Spa 表記で、天然温泉かどうかの確証がないため4番手です。",
+      "altRecommendation": "温泉条件を少し緩めて、館内の新しさを優先するなら候補に残せます。",
+      "scores": {
+        "food": 4.3,
+        "onsen": 3.7,
+        "cleanliness": 4.8,
+        "privateBath": 2.0
+      },
+      "pricing": {
+        "qualifyingFrom": 24900,
+        "referenceFrom": 24900,
+        "shortLabel": "朝食付 ¥24,900〜",
+        "detail": "公式予約で、2026/09/16-17・大人2名・1室の朝食付最安として合計 ¥24,900 を確認。素泊まり最安は ¥18,400 でした。"
+      },
+      "availability": {
+        "label": "空室あり",
+        "badgeClass": "badge-ok",
+        "detail": "公式予約で8件の可視プランを確認。朝食付・素泊まりとも複数在庫が見えました。"
+      },
+      "cancellation": "予約確認・変更・キャンセル導線あり。キャンセル料率は各プラン詳細で要確認",
+      "location": {
+        "summary": "北の峰エリア。新しい滞在拠点として使いやすい位置です。",
+        "highlights": [
+          "住所: 北海道富良野市北の峰町14-38",
+          "北の峰エリア中心寄り",
+          "レストラン、バー、ベーカリー併設"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=nozo%20hotel%20%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "facilities": [
+        "Sugi Spa、大浴場、水風呂、サウナ",
+        "朝食付プランあり",
+        "インターナショナル料理のレストラン / バー / ベーカリー",
+        "新しめの館内デザイン",
+        "全室禁煙系プランを確認"
+      ],
+      "comparisonNotes": [
+        "食事: 朝食付は十分だが、夕食の強い訴求では上位宿に譲る",
+        "温泉: スパ・大浴場は確認済みだが天然温泉表記は未確認",
+        "綺麗さ: 6候補でも最上位級",
+        "貸切 / 客室風呂: 強い訴求なし"
+      ],
+      "booking": {
+        "official": "https://go-nozohotel.reservation.jp/ja/plans?checkin_date=20260916&checkout_date=20260917&adults=2&child1=0&child2=0&child3=0&child4=0&child5=0&children=0&rooms=1&dayuseFlg=0&sort=1&dateUndecidedFlg=0",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+nozo+hotel+%E5%AF%8C%E8%89%AF%E9%87%8E",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+nozo+hotel+%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "sources": [
+        {
+          "label": "nozo hotel 公式トップ",
+          "url": "https://nozohotel.com/"
+        },
+        {
+          "label": "nozo hotel 公式 レストラン",
+          "url": "https://nozohotel.com/restaurant/"
+        },
+        {
+          "label": "nozo hotel 公式予約検索",
+          "url": "https://go-nozohotel.reservation.jp/ja/plans?checkin_date=20260916&checkout_date=20260917&adults=2&child1=0&child2=0&child3=0&child4=0&child5=0&children=0&rooms=1&dayuseFlg=0&sort=1&dateUndecidedFlg=0"
+        }
+      ]
+    },
+    {
+      "id": "hitohana",
+      "rank": 5,
+      "name": "ホテル＆コンドミニアム 一花 [HITOHANA]",
+      "bestFor": "清潔感と駅送迎を重視し、温泉を絶対条件から外せる二人向け",
+      "summary": "朝食付実売は良く、駅送迎も便利。ただし温泉必須条件には合致しません。",
+      "recommendation": "朝食、清潔感、駅送迎のまとまりは良好です。ただし公式上は温泉訴求が見えず、今回条件では順位を落とします。",
+      "altRecommendation": "温泉条件を外して『きれいで移動しやすい宿』として見るなら、実用性は高いです。",
+      "scores": {
+        "food": 4.2,
+        "onsen": 1.5,
+        "cleanliness": 4.7,
+        "privateBath": 3.6
+      },
+      "pricing": {
+        "qualifyingFrom": 26240,
+        "referenceFrom": 26240,
+        "shortLabel": "朝食付 ¥26,240〜",
+        "detail": "公式 Tripla 予約で、2026/09/16-17・大人2名・1室の朝食付プランとして ¥26,240 を確認。会員価格は ¥23,616 表示でした。"
+      },
+      "availability": {
+        "label": "空室あり",
+        "badgeClass": "badge-ok",
+        "detail": "公式予約で検索結果6件を確認。朝食付プランと禁煙ツイン在庫が見えました。"
+      },
+      "cancellation": "通常は 7日前〜前々日 30% / 前日 50% / 当日 80%（プラン別条件あり）",
+      "location": {
+        "summary": "北の峰エリア。富良野駅との送迎があり、公共交通でも動きやすいです。",
+        "highlights": [
+          "住所: 北海道富良野市北の峰町23-10",
+          "富良野駅からタクシー約10分、または無料送迎シャトル",
+          "ホテル-富良野駅間の送迎サービスあり"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%8A%B1%20HITOHANA%20%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "facilities": [
+        "朝食ビュッフェ再開",
+        "夕食はアラカルト中心",
+        "無料送迎あり",
+        "コンドミニアムタイプ客室あり",
+        "温泉訴求は確認できず"
+      ],
+      "comparisonNotes": [
+        "食事: 朝食は良好、夕食はホテル完結力がやや弱い",
+        "温泉: 必須条件には非適合",
+        "綺麗さ: 6候補でも上位",
+        "貸切 / 客室風呂: 客室バス系はあるが温泉ではない"
+      ],
+      "booking": {
+        "official": "https://hotel-hitohana.com/",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+%E4%B8%80%E8%8A%B1+HITOHANA+%E5%AF%8C%E8%89%AF%E9%87%8E",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+%E4%B8%80%E8%8A%B1+HITOHANA+%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "sources": [
+        {
+          "label": "一花 公式トップ",
+          "url": "https://hotel-hitohana.com/"
+        },
+        {
+          "label": "一花 公式予約",
+          "url": "https://bw.tripla.ai/booking/result?code=865dcb7a-57fd-4efc-9a5d-bcd0038601a4&checkin=2026%2F09%2F16&checkout=2026%2F09%2F17&type=rooms&is_day_use=false&order=recommended&is_including_occupied=false&adults=2&kids_tiers=%5B%5D&room_count=1&parentUrl=https%3A%2F%2Fhotel-hitohana.com&parentPathname=%2F&mcp_currency=JPY"
+        }
+      ]
+    },
+    {
+      "id": "edelwarme",
+      "rank": 6,
+      "name": "エーデルヴェルメ",
+      "bestFor": "価格を抑えつつ北の峰側に泊まりたい二人向け",
+      "summary": "朝食付価格は取りやすいが、温泉・大浴場・露天の条件を満たしません。",
+      "recommendation": "価格は魅力ですが、公式データ上で温泉・大浴場・露天風呂がいずれも非対応です。今回条件では優先順位を大きく落とします。",
+      "altRecommendation": "温泉必須を外せるなら、価格面の対抗としては見られます。",
+      "scores": {
+        "food": 3.9,
+        "onsen": 1.0,
+        "cleanliness": 4.0,
+        "privateBath": 1.4
+      },
+      "pricing": {
+        "qualifyingFrom": 17120,
+        "referenceFrom": 17120,
+        "shortLabel": "朝食付 ¥17,120〜",
+        "detail": "同条件検索で、朝食付早割の可視在庫 ¥17,120〜 を確認。2食付の秋ビュッフェ系は ¥32,440〜 でした。"
+      },
+      "availability": {
+        "label": "空室あり",
+        "badgeClass": "badge-ok",
+        "detail": "同条件検索で可視プラン7件を確認。価格帯は比較的取りやすく見えました。"
+      },
+      "cancellation": "予約確認・キャンセル導線あり。キャンセル料率は各プラン詳細で要確認",
+      "location": {
+        "summary": "北の峰エリア。ゲレンデ側で泊まりやすい一方、温泉条件とは相性が弱いです。",
+        "highlights": [
+          "住所: 〒076-0034 北海道富良野市北の峰町9-20",
+          "北の峰エリアのスタンダードホテル",
+          "2食付・朝食付・禁煙での検索導線あり"
+        ],
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%E3%82%A8%E3%83%BC%E3%83%87%E3%83%AB%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A1%20%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "facilities": [
+        "朝食バイキング、夕食バイキング系プランあり",
+        "禁煙プランあり",
+        "温泉、大浴場、露天風呂は公式データ上で非対応",
+        "北の峰側の価格取りやすい候補",
+        "予約確認・キャンセル導線あり"
+      ],
+      "comparisonNotes": [
+        "食事: 2食付でも価格は比較的抑えやすい",
+        "温泉: 今回条件とは非適合",
+        "綺麗さ: 標準的",
+        "貸切 / 客室風呂: 目立った優位性なし"
+      ],
+      "booking": {
+        "official": "https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=0000001865",
+        "rakutenSearch": "https://www.google.com/search?q=site%3Atravel.rakuten.co.jp+%E3%82%A8%E3%83%BC%E3%83%87%E3%83%AB%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A1+%E5%AF%8C%E8%89%AF%E9%87%8E",
+        "jalanSearch": "https://www.google.com/search?q=site%3Awww.jalan.net+%E3%82%A8%E3%83%BC%E3%83%87%E3%83%AB%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%A1+%E5%AF%8C%E8%89%AF%E9%87%8E"
+      },
+      "sources": [
+        {
+          "label": "エーデルヴェルメ 公式予約",
+          "url": "https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=0000001865"
+        },
+        {
+          "label": "エーデルヴェルメ 公式アクセス",
+          "url": "https://www.edelwarme.jp/access/"
+        }
+      ]
+    }
+  ]
+}
