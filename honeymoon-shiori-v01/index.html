@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>新婚旅行のしおり_v01</title>
-    <meta name="description" content="2026年9月の北海道新婚旅行しおり。日程、地図、移動情報を端末幅に合わせて表示する公開版。" />
+    <meta
+      name="description"
+      content="2026年9月の北海道新婚旅行しおり。日程、宿泊、移動、Google Mapsのルートを端末幅に合わせて表示する公開版。"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -17,6 +20,7 @@
         </div>
         <nav class="day-nav" id="day-nav" aria-label="日別ページ"></nav>
       </aside>
+
       <main class="content-area">
         <header class="topbar">
           <div>
@@ -24,40 +28,58 @@
             <h2 id="screen-title">北海道 4泊5日</h2>
           </div>
           <div class="topbar-actions">
-            <button class="icon-button" id="print-button" type="button" aria-label="印刷"><span aria-hidden="true">⎙</span></button>
-            <button class="icon-button" id="copy-button" type="button" aria-label="今日の要点をコピー"><span aria-hidden="true">⧉</span></button>
+            <button class="icon-button" id="print-button" type="button" aria-label="印刷">
+              <span aria-hidden="true">⎙</span>
+            </button>
+            <button class="icon-button" id="copy-button" type="button" aria-label="今日の要点をコピー">
+              <span aria-hidden="true">⧉</span>
+            </button>
           </div>
         </header>
+
         <section class="notice-strip" id="privacy-note"></section>
         <section class="summary-grid" id="summary-grid"></section>
+
         <section class="day-hero" id="day-hero"></section>
+
         <section class="detail-layout">
           <article class="panel timeline-panel">
-            <div class="panel-head"><p class="section-label">Time Plan</p><h3>当日の流れ</h3></div>
+            <div class="panel-head">
+              <p class="section-label">Time Plan</p>
+              <h3>当日の流れ</h3>
+            </div>
             <ol class="timeline" id="timeline"></ol>
           </article>
+
           <article class="panel checks-panel">
-            <div class="panel-head"><p class="section-label">Checks</p><h3>当日確認</h3></div>
+            <div class="panel-head">
+              <p class="section-label">Checks</p>
+              <h3>当日確認</h3>
+            </div>
             <ul class="check-list" id="check-list"></ul>
           </article>
         </section>
       </main>
+
       <aside class="info-rail" aria-label="移動と宿泊情報">
         <section class="panel compact-panel">
-          <div class="panel-head"><p class="section-label">Transport</p><h3>移動メモ</h3></div>
+          <div class="panel-head">
+            <p class="section-label">Transport</p>
+            <h3>移動メモ</h3>
+          </div>
           <div class="transport-stack" id="transport-stack"></div>
         </section>
+
         <section class="panel compact-panel">
-          <div class="panel-head"><p class="section-label">Hotels</p><h3>宿泊メモ</h3></div>
+          <div class="panel-head">
+            <p class="section-label">Hotels</p>
+            <h3>宿泊メモ</h3>
+          </div>
           <div class="hotel-stack" id="hotel-stack"></div>
         </section>
       </aside>
     </div>
-    <script src="./data/maps/day1.js"></script>
-    <script src="./data/maps/day2.js"></script>
-    <script src="./data/maps/day3.js"></script>
-    <script src="./data/maps/day4.js"></script>
-    <script src="./data/maps/day5.js"></script>
+
     <script src="./data/trip.js"></script>
     <script src="./app.js"></script>
   </body>
