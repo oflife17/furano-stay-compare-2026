@@ -35,7 +35,7 @@ function googleEmbedUrl(map) {
   const destination = stops
     .map((stop, index) => encodeURIComponent(index === 0 ? stop : `to:${stop}`))
     .join("%20");
-  return `https://www.google.com/maps?output=embed&saddr=${encodeURIComponent(map.origin)}&daddr=${destination}`;
+  return `https://maps.google.com/maps?f=d&source=s_d&saddr=${encodeURIComponent(map.origin)}&daddr=${destination}&hl=ja&output=embed`;
 }
 
 function renderNav() {
