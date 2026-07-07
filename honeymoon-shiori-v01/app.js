@@ -1,5 +1,5 @@
 const state = {
-  trip: null,
+  trip: window.TRIP_DATA,
   currentDayId: null
 };
 
@@ -13,11 +13,12 @@ const selectors = {
   transport: document.getElementById("transport-stack"),
   hotels: document.getElementById("hotel-stack"),
   print: document.getElementById("print-button"),
-  copy: document.getElementById("copy-button")
+  copy: document.getElementById("copy-button"),
+  screenTitle: document.getElementById("screen-title")
 };
 
 const escapeHtml = (value) =>
-  String(value)
+  String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -29,12 +30,28 @@ function dayFromHash(days) {
   return days.find((day) => day.id === id)?.id ?? days[0].id;
 }
 
+function googleDirectionsUrl(map, embed = false) {
+  const params = new URLSearchParams({
+    api: "1",
+    origin: map.origin,
+    destination: map.destination,
+    travelmode: map.travelmode || "driving"
+  });
+  if (map.waypoints?.length) {
+    params.set("waypoints", map.waypoints.join("|"));
+  }
+  if (embed) {
+    params.set("output", "embed");
+  }
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
+}
+
 function renderNav() {
   const { days } = state.trip;
   selectors.nav.innerHTML = days
     .map(
       (day) => `
-        <button class="day-tab" type="button" data-day="${day.id}" aria-selected="${day.id === state.currentDayId}">
+        <button class="day-tab" type="button" data-day="${escapeHtml(day.id)}" aria-selected="${day.id === state.currentDayId}">
           <span class="day-date">${escapeHtml(day.date)}<br />${escapeHtml(day.weekday)}</span>
           <span>
             <span class="day-title">${escapeHtml(day.title)}</span>
@@ -46,8 +63,46 @@ function renderNav() {
     .join("");
 }
 
+function renderTransport(blocks) {
+  selectors.transport.innerHTML = Object.values(blocks)
+    .map(
+      (block) => `
+        <article class="info-row">
+          <h4>${escapeHtml(block.title)}</h4>
+          <ul>
+            ${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderHotels(hotels) {
+  selectors.hotels.innerHTML = hotels
+    .map(
+      (hotel) => `
+        <article class="info-row hotel-row">
+          <p class="hotel-meta">${escapeHtml(hotel.label)} / ${escapeHtml(hotel.area)}</p>
+          <h4>${escapeHtml(hotel.name)}</h4>
+          <dl class="hotel-details">
+            <div><dt>IN</dt><dd>${escapeHtml(hotel.checkin)}</dd></div>
+            <div><dt>OUT</dt><dd>${escapeHtml(hotel.checkout)}</dd></div>
+            <div><dt>食事</dt><dd>${escapeHtml(hotel.meal)}</dd></div>
+            <div><dt>支払</dt><dd>${escapeHtml(hotel.payment)}</dd></div>
+          </dl>
+          <ul>
+            ${hotel.notes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderStaticPanels() {
-  const { privacy, summary, transport, hotels } = state.trip;
+  const { meta, privacy, summary, transport, hotels } = state.trip;
+  selectors.screenTitle.textContent = meta.subtitle;
   selectors.privacy.innerHTML = `<strong>${escapeHtml(privacy.label)}:</strong> ${escapeHtml(privacy.note)}`;
   selectors.summary.innerHTML = summary
     .map(
@@ -59,37 +114,36 @@ function renderStaticPanels() {
       `
     )
     .join("");
+  renderTransport(transport);
+  renderHotels(hotels);
+}
 
-  selectors.transport.innerHTML = Object.values(transport)
-    .map(
-      (block) => `
-        <article class="mini-card">
-          <h4>${escapeHtml(block.title)}</h4>
-          <ul>
-            ${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-          </ul>
-        </article>
-      `
-    )
-    .join("");
-
-  selectors.hotels.innerHTML = hotels
-    .map(
-      (hotel) => `
-        <article class="mini-card">
-          <p class="hotel-meta">${escapeHtml(hotel.label)} / ${escapeHtml(hotel.area)}</p>
-          <p class="hotel-status">${escapeHtml(hotel.status)}</p>
-        </article>
-      `
-    )
-    .join("");
+function renderPlaces(day) {
+  return `
+    <div class="pin-list" aria-label="地図上の主な地点">
+      ${day.places
+        .map(
+          (place) => `
+            <span class="place-chip">
+              <strong>${escapeHtml(place.time)}</strong>
+              ${escapeHtml(place.name)}
+            </span>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderDay() {
   const day = state.trip.days.find((item) => item.id === state.currentDayId);
   if (!day) return;
 
-  document.title = `${day.date} ${day.title} | 新婚旅行のしおり_v01`;
+  const embedUrl = googleDirectionsUrl(day.map, true);
+  const fullMapUrl = googleDirectionsUrl(day.map, false);
+  const hotel = state.trip.hotels.find((item) => item.id === day.hotelId);
+
+  document.title = `${day.date} ${day.title} | ${state.trip.meta.title}`;
   renderNav();
 
   selectors.hero.innerHTML = `
@@ -101,12 +155,23 @@ function renderDay() {
       </div>
       <div class="focus-box">
         <p>${escapeHtml(day.weatherFocus)}</p>
+        ${hotel ? `<p class="arrival-note">宿: ${escapeHtml(hotel.name)} / ${escapeHtml(hotel.checkin)}</p>` : ""}
       </div>
     </div>
-    <figure class="map-frame">
-      <img src="${escapeHtml(day.map)}" alt="${escapeHtml(day.date)}の行程地図" />
-      <figcaption class="map-label">v34地図素材</figcaption>
-    </figure>
+    <section class="map-frame" aria-label="${escapeHtml(day.date)}のGoogle Mapsルート">
+      <iframe
+        title="${escapeHtml(day.date)} ${escapeHtml(day.title)}のGoogle Mapsルート"
+        src="${escapeHtml(embedUrl)}"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+      <div class="map-actions">
+        <a href="${escapeHtml(fullMapUrl)}" target="_blank" rel="noreferrer">Google Mapsで開く</a>
+        <span>移動時間は当日再確認</span>
+      </div>
+      ${renderPlaces(day)}
+    </section>
   `;
 
   selectors.timeline.innerHTML = day.timePlan
@@ -147,14 +212,19 @@ async function copyCurrentDay() {
     `${day.date}(${day.weekday}) ${day.title}`,
     day.route,
     `重点: ${day.weatherFocus}`,
+    "行程:",
+    ...day.timePlan.map((item) => `- ${item.time} ${item.body}`),
     "確認:",
     ...day.checks.map((item) => `- ${item}`)
   ].join("\n");
   await navigator.clipboard.writeText(text);
 }
 
-async function init() {
-  state.trip = window.TRIP_DATA;
+function init() {
+  if (!state.trip) {
+    document.body.innerHTML = '<main class="panel" style="margin: 24px">旅行データを読み込めませんでした。</main>';
+    return;
+  }
   state.currentDayId = dayFromHash(state.trip.days);
   renderStaticPanels();
   renderDay();
@@ -171,6 +241,4 @@ async function init() {
   window.addEventListener("hashchange", () => setDay(dayFromHash(state.trip.days), false));
 }
 
-init().catch((error) => {
-  document.body.innerHTML = `<main class="panel" style="margin: 24px">${escapeHtml(error.message)}</main>`;
-});
+init();
