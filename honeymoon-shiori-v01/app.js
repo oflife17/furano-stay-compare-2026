@@ -30,20 +30,12 @@ function dayFromHash(days) {
   return days.find((day) => day.id === id)?.id ?? days[0].id;
 }
 
-function googleDirectionsUrl(map, embed = false) {
-  const params = new URLSearchParams({
-    api: "1",
-    origin: map.origin,
-    destination: map.destination,
-    travelmode: map.travelmode || "driving"
-  });
-  if (map.waypoints?.length) {
-    params.set("waypoints", map.waypoints.join("|"));
-  }
-  if (embed) {
-    params.set("output", "embed");
-  }
-  return `https://www.google.com/maps/dir/?${params.toString()}`;
+function googleEmbedUrl(map) {
+  const stops = [...(map.waypoints || []), map.destination];
+  const destination = stops
+    .map((stop, index) => encodeURIComponent(index === 0 ? stop : `to:${stop}`))
+    .join("%20");
+  return `https://www.google.com/maps?output=embed&saddr=${encodeURIComponent(map.origin)}&daddr=${destination}`;
 }
 
 function renderNav() {
@@ -118,29 +110,11 @@ function renderStaticPanels() {
   renderHotels(hotels);
 }
 
-function renderPlaces(day) {
-  return `
-    <div class="pin-list" aria-label="地図上の主な地点">
-      ${day.places
-        .map(
-          (place) => `
-            <span class="place-chip">
-              <strong>${escapeHtml(place.time)}</strong>
-              ${escapeHtml(place.name)}
-            </span>
-          `
-        )
-        .join("")}
-    </div>
-  `;
-}
-
 function renderDay() {
   const day = state.trip.days.find((item) => item.id === state.currentDayId);
   if (!day) return;
 
-  const embedUrl = googleDirectionsUrl(day.map, true);
-  const fullMapUrl = googleDirectionsUrl(day.map, false);
+  const embedUrl = googleEmbedUrl(day.map);
   const hotel = state.trip.hotels.find((item) => item.id === day.hotelId);
 
   document.title = `${day.date} ${day.title} | ${state.trip.meta.title}`;
@@ -161,18 +135,24 @@ function renderDay() {
     <section class="map-frame" aria-label="${escapeHtml(day.date)}のGoogle Mapsルート">
       <iframe
         title="${escapeHtml(day.date)} ${escapeHtml(day.title)}のGoogle Mapsルート"
-        src="${escapeHtml(embedUrl)}"
+        data-map-src="${escapeHtml(embedUrl)}"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen
       ></iframe>
-      <div class="map-actions">
-        <a href="${escapeHtml(fullMapUrl)}" target="_blank" rel="noreferrer">Google Mapsで開く</a>
-        <span>移動時間は当日再確認</span>
-      </div>
-      ${renderPlaces(day)}
     </section>
   `;
+
+  const iframe = selectors.hero.querySelector("[data-map-src]");
+  if (iframe) {
+    requestAnimationFrame(() => {
+      const height = Math.round(iframe.getBoundingClientRect().height);
+      if (height > 0) {
+        iframe.style.height = `${height}px`;
+      }
+      iframe.src = iframe.dataset.mapSrc;
+    });
+  }
 
   selectors.timeline.innerHTML = day.timePlan
     .map(
