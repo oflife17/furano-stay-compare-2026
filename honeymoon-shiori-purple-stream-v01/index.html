@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新婚旅行のしおり | Purple Stream</title>
+    <meta
+      name="description"
+      content="2026年9月の北海道新婚旅行しおり。Purple Streamを基にしたダークモード版。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260709-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-rail" aria-label="日程ナビゲーション">
+        <section class="brand-panel">
+          <p class="eyebrow">Honeymoon Live Guide</p>
+          <h1>新婚旅行のしおり</h1>
+          <p class="brand-copy">北海道 4泊5日を、当日の動きが追いやすいダークUIで整理。</p>
+        </section>
+
+        <section class="utility-panel">
+          <div>
+            <p class="eyebrow">Broadcast</p>
+            <h2 id="screen-title">北海道 4泊5日</h2>
+            <p class="screen-subtitle" id="screen-subtitle"></p>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="print-button" type="button" aria-label="印刷">
+              <span aria-hidden="true">⎙</span>
+            </button>
+            <button class="icon-button" id="copy-button" type="button" aria-label="今日の要点をコピー">
+              <span aria-hidden="true">⧉</span>
+            </button>
+          </div>
+        </section>
+
+        <nav class="day-nav" id="day-nav" aria-label="日別ページ"></nav>
+      </aside>
+
+      <main class="main-stage">
+        <section class="hero-stage" id="hero-stage"></section>
+
+        <section class="content-grid">
+          <article class="panel timeline-panel">
+            <div class="panel-head">
+              <p class="section-label">Time Plan</p>
+              <h3>当日の流れ</h3>
+            </div>
+            <ol class="timeline" id="timeline"></ol>
+          </article>
+
+          <article class="panel checks-panel">
+            <div class="panel-head">
+              <p class="section-label">Checks</p>
+              <h3>確認事項</h3>
+            </div>
+            <ul class="check-list" id="check-list"></ul>
+          </article>
+        </section>
+      </main>
+
+      <aside class="info-rail" aria-label="宿泊と移動情報">
+        <section class="panel compact-panel">
+          <div class="panel-head">
+            <p class="section-label">Tonight</p>
+            <h3>本日の宿</h3>
+          </div>
+          <div id="current-hotel"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="panel-head">
+            <p class="section-label">Transport</p>
+            <h3>移動メモ</h3>
+          </div>
+          <div class="transport-stack" id="transport-stack"></div>
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="panel-head">
+            <p class="section-label">All Stays</p>
+            <h3>宿泊一覧</h3>
+          </div>
+          <div class="hotel-stack" id="hotel-stack"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script src="./data/trip.js?v=20260709-1"></script>
+    <script src="./app.js?v=20260709-1"></script>
+  </body>
+</html>
