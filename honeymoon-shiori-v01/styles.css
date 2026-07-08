@@ -293,6 +293,21 @@ h3 {
   font-weight: 800;
 }
 
+.hotel-link {
+  color: inherit;
+  text-decoration-color: rgba(168, 78, 52, 0.45);
+  text-underline-offset: 3px;
+}
+
+.hotel-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.hotel-link--light {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.58);
+}
+
 .map-frame {
   position: relative;
   background: #dfe8de;
@@ -304,6 +319,10 @@ h3 {
   height: 100%;
   min-height: clamp(320px, 34vw, 430px);
   border: 0;
+}
+
+.map-frame--tall iframe {
+  min-height: clamp(400px, 42vw, 540px);
 }
 
 .detail-layout {
@@ -559,6 +578,10 @@ h3 {
     min-height: clamp(320px, 86vw, 360px);
   }
 
+  .map-frame--tall iframe {
+    min-height: clamp(380px, 98vw, 460px);
+  }
+
   .panel {
     padding: 14px;
   }
@@ -587,6 +610,7 @@ h3 {
     flex-basis: 218px;
     grid-template-columns: 44px 154px;
   }
+
 }
 
 @media print {
@@ -614,4 +638,15 @@ h3 {
     box-shadow: none;
     break-inside: avoid;
   }
+}
+
+#privacy-note,
+.notice-strip,
+#summary-grid,
+.summary-grid {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
