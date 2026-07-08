@@ -23,6 +23,12 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+function hotelLinkMarkup(hotel, className = "hotel-link") {
+  const name = escapeHtml(hotel?.name ?? "");
+  if (!hotel?.url) return name;
+  return `<a class="${className}" href="${escapeHtml(hotel.url)}" target="_blank" rel="noreferrer">${name}</a>`;
+}
+
 function dayFromHash(days) {
   const id = window.location.hash.replace("#", "");
   return days.find((day) => day.id === id)?.id ?? days[0].id;
@@ -74,7 +80,7 @@ function renderHotels(hotels) {
       (hotel) => `
         <article class="info-row hotel-row">
           <p class="hotel-meta">${escapeHtml(hotel.label)} / ${escapeHtml(hotel.area)}</p>
-          <h4>${escapeHtml(hotel.name)}</h4>
+          <h4>${hotelLinkMarkup(hotel)}</h4>
           <dl class="hotel-details">
             <div><dt>IN</dt><dd>${escapeHtml(hotel.checkin)}</dd></div>
             <div><dt>OUT</dt><dd>${escapeHtml(hotel.checkout)}</dd></div>
@@ -109,6 +115,7 @@ function renderDay() {
 
   const embedUrl = googleEmbedUrl(day.map);
   const hotel = state.trip.hotels.find((item) => item.id === day.hotelId);
+  const mapClass = day.map?.size === "tall" ? "map-frame map-frame--tall" : "map-frame";
 
   document.title = `${day.date} ${day.title} | ${state.trip.meta.title}`;
   renderNav();
@@ -122,10 +129,10 @@ function renderDay() {
       </div>
       <div class="focus-box">
         <p>${escapeHtml(day.weatherFocus)}</p>
-        ${hotel ? `<p class="arrival-note">宿: ${escapeHtml(hotel.name)} / ${escapeHtml(hotel.checkin)}</p>` : ""}
+        ${hotel ? `<p class="arrival-note">宿: ${hotelLinkMarkup(hotel, "hotel-link hotel-link--light")} / ${escapeHtml(hotel.checkin)}</p>` : ""}
       </div>
     </div>
-    <section class="map-frame" aria-label="${escapeHtml(day.date)}のGoogle Mapsルート">
+    <section class="${mapClass}" aria-label="${escapeHtml(day.date)}のGoogle Mapsルート">
       <iframe
         title="${escapeHtml(day.date)} ${escapeHtml(day.title)}のGoogle Mapsルート"
         data-map-src="${escapeHtml(embedUrl)}"
