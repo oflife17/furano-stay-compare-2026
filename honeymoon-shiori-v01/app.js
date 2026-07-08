@@ -97,6 +97,12 @@ function renderStaticPanels() {
   renderHotels(hotels);
 }
 
+function removeDeprecatedBlocks() {
+  document
+    .querySelectorAll("#privacy-note, .notice-strip, #summary-grid, .summary-grid")
+    .forEach((element) => element.remove());
+}
+
 function renderDay() {
   const day = state.trip.days.find((item) => item.id === state.currentDayId);
   if (!day) return;
@@ -193,6 +199,7 @@ function init() {
     return;
   }
   state.currentDayId = dayFromHash(state.trip.days);
+  removeDeprecatedBlocks();
   renderStaticPanels();
   renderDay();
 
