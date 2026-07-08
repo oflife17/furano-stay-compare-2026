@@ -5,8 +5,6 @@ const state = {
 
 const selectors = {
   nav: document.getElementById("day-nav"),
-  privacy: document.getElementById("privacy-note"),
-  summary: document.getElementById("summary-grid"),
   hero: document.getElementById("day-hero"),
   timeline: document.getElementById("timeline"),
   checks: document.getElementById("check-list"),
@@ -93,19 +91,8 @@ function renderHotels(hotels) {
 }
 
 function renderStaticPanels() {
-  const { meta, privacy, summary, transport, hotels } = state.trip;
+  const { meta, transport, hotels } = state.trip;
   selectors.screenTitle.textContent = meta.subtitle;
-  selectors.privacy.innerHTML = `<strong>${escapeHtml(privacy.label)}:</strong> ${escapeHtml(privacy.note)}`;
-  selectors.summary.innerHTML = summary
-    .map(
-      (item) => `
-        <article class="summary-card">
-          <p class="summary-label">${escapeHtml(item.label)}</p>
-          <p class="summary-value">${escapeHtml(item.value)}</p>
-        </article>
-      `
-    )
-    .join("");
   renderTransport(transport);
   renderHotels(hotels);
 }
