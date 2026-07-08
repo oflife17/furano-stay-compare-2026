@@ -1,6 +1,6 @@
 window.TRIP_DATA = {
   meta: {
-    title: "新婚旅行のしおり_v01",
+    title: "新婚旅行のしおり",
     subtitle: "北海道 4泊5日 / 2026年9月14日-18日",
     updatedAt: "2026-07-08",
     publicMode: true,
@@ -50,6 +50,7 @@ window.TRIP_DATA = {
       label: "1泊目 9/14(月)",
       area: "層雲峡付近",
       name: "層雲峡 朝陽亭",
+      url: "https://www.choyotei.com/",
       checkin: "17:00予定 / 到着目標18:00",
       checkout: "9/15 10:00まで",
       meal: "夕朝食付き",
@@ -66,6 +67,7 @@ window.TRIP_DATA = {
       label: "2泊目 9/15(火)",
       area: "美瑛付近",
       name: "ザワザワ村 タンネの小道",
+      url: "https://spoonvalley.com/",
       checkin: "17:00-18:00予定",
       checkout: "9/16 朝",
       meal: "朝食付き",
@@ -82,6 +84,7 @@ window.TRIP_DATA = {
       label: "3泊目 9/16(水)",
       area: "富良野付近",
       name: "ラビスタ富良野ヒルズ",
+      url: "https://dormy-hotels.com/dormyinn/hotels/furano/",
       checkin: "15:00-24:00",
       checkout: "9/17 11:00まで",
       meal: "朝食付き",
@@ -98,6 +101,7 @@ window.TRIP_DATA = {
       label: "4泊目 9/17(木)",
       area: "トマム付近",
       name: "リゾナーレトマム",
+      url: "https://www.snowtomamu.jp/summer/hotel/risonare/",
       checkin: "15:00以降",
       checkout: "9/18 11:00まで",
       meal: "朝食付き",
@@ -121,7 +125,8 @@ window.TRIP_DATA = {
         origin: "旭川空港",
         destination: "層雲峡 朝陽亭",
         waypoints: ["東川町", "流星・銀河の滝"],
-        travelmode: "driving"
+        travelmode: "driving",
+        size: "tall"
       },
       places: [
         { time: "14:25", name: "旭川空港" },
@@ -235,7 +240,8 @@ window.TRIP_DATA = {
         origin: "ラビスタ富良野ヒルズ",
         destination: "リゾナーレトマム",
         waypoints: ["ファーム富田", "カンパーナ六花亭"],
-        travelmode: "driving"
+        travelmode: "driving",
+        size: "tall"
       },
       places: [
         { time: "09:30", name: "ラビスタ富良野ヒルズ" },
