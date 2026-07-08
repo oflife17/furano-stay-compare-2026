@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新婚旅行のしおり | ShopVibe</title>
+    <meta
+      name="description"
+      content="2026年9月の北海道新婚旅行しおり。ShopVibeを基に再構成した、明るく余白の大きいWeb版。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260709-2" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero-layout">
+        <div class="hero-story">
+          <p class="eyebrow">Hokkaido Honeymoon Edit</p>
+          <h1>新婚旅行のしおり</h1>
+          <p class="hero-text">
+            4泊5日の北海道旅を、その日見る情報だけに絞って整理。
+            ルート、時間、宿、移動を一画面で追えるプレビュー版。
+          </p>
+          <div class="hero-actions">
+            <button class="cta-button cta-button--primary" id="copy-button" type="button">今日の要点をコピー</button>
+            <button class="cta-button cta-button--secondary" id="print-button" type="button">印刷</button>
+          </div>
+          <dl class="summary-grid" id="summary-grid"></dl>
+        </div>
+
+        <aside class="hero-tray">
+          <p class="eyebrow">Today Capsule</p>
+          <h2 id="screen-title">北海道 4泊5日</h2>
+          <p class="summary-subtitle" id="screen-subtitle"></p>
+          <div class="chip-row" id="hero-chips"></div>
+          <div class="snapshot-stack" id="hero-snapshot"></div>
+        </aside>
+      </header>
+
+      <nav class="day-gallery" id="day-nav" aria-label="日別ページ"></nav>
+
+      <main class="main-layout">
+        <section class="primary-column">
+          <section class="spotlight-card" id="hero-stage"></section>
+
+          <section class="planner-grid">
+            <article class="surface-card">
+              <div class="section-head">
+                <div>
+                  <p class="section-label">Time Plan</p>
+                  <h3>当日の流れ</h3>
+                </div>
+              </div>
+              <ol class="timeline-list" id="timeline"></ol>
+            </article>
+
+            <article class="surface-card">
+              <div class="section-head">
+                <div>
+                  <p class="section-label">Checks</p>
+                  <h3>当日確認</h3>
+                </div>
+              </div>
+              <ul class="check-list" id="check-list"></ul>
+            </article>
+          </section>
+        </section>
+
+        <aside class="detail-column">
+          <section class="surface-card stay-card" id="current-hotel"></section>
+
+          <section class="surface-card">
+            <div class="section-head">
+              <div>
+                <p class="section-label">Transport</p>
+                <h3>移動メモ</h3>
+              </div>
+            </div>
+            <div class="stack-list" id="transport-stack"></div>
+          </section>
+
+          <section class="surface-card">
+            <div class="section-head">
+              <div>
+                <p class="section-label">All Stays</p>
+                <h3>宿泊一覧</h3>
+              </div>
+            </div>
+            <div class="stack-list" id="hotel-stack"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./data/trip.js?v=20260709-2"></script>
+    <script src="./app.js?v=20260709-2"></script>
+  </body>
+</html>
